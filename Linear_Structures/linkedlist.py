@@ -77,6 +77,15 @@ class LinkedList:
 	def size(self):
 		return self.length
 
+	# Method to reverse a linked list iteratively
+	def reverse(self):
+		current = self.head
+		prev = None
+		while current:
+			current.next, current, prev = prev, current.next, current
+		self.head = prev
+		return self.head
+
 	# Method that will describe the formal representation of the linked list
 	def __repr__(self):
 		current, nodes = self.head, []
@@ -101,6 +110,8 @@ if __name__ == "__main__":
 	print(myList.search(6))
 	print(myList.getHead())
 	print(myList.getTail())
+	myList.reverse()
+	print(myList)
 
 
 
