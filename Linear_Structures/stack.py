@@ -25,7 +25,7 @@ class Stack:
 		return self.items[-1]
 
 	# Method to reverse a string using a stack
-	def stringReverse(s):
+	def stringReverse(self, s):
 		stack = Stack()
 		reversed = []
 		for char in s:
@@ -46,6 +46,7 @@ if __name__ == "__main__":
 	print(myStack.size())
 	print(myStack.seek())
 	print(myStack.isEmpty())
+	print(myStack.stringReverse("Derek"))
 
 
 
