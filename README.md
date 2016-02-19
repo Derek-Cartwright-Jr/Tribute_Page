@@ -14,4 +14,5 @@ Data Structures and Algorithms implemented in Python
     <li>Binary Heap</li>
     <li>Trie</li>
   </ul>
+<li>Graphs</li>
 </ul>
