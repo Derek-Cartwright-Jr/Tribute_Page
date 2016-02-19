@@ -1,3 +1,5 @@
+"""Binary Search Tree data structure"""
+
 class TreeNode:
 	def __init__(self, value):
 		self.parent = None

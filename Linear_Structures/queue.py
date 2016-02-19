@@ -32,6 +32,3 @@ if __name__ == "__main__":
 	print(myQueue.size())
 	print(myQueue.dequeue())
 	print(myQueue.size())
-
-
-

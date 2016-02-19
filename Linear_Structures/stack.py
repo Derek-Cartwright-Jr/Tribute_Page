@@ -47,8 +47,3 @@ if __name__ == "__main__":
 	print(myStack.seek())
 	print(myStack.isEmpty())
 	print(myStack.stringReverse("Derek"))
-
-
-
-
-

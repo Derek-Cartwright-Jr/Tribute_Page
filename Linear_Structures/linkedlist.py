@@ -112,6 +112,3 @@ if __name__ == "__main__":
 	print(myList.getTail())
 	myList.reverse()
 	print(myList)
-
-
-
