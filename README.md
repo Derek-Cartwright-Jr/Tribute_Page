@@ -26,19 +26,19 @@ Linear Data Structures
     - Random access is done in constant time
       - No implementation necessary.
     
-    - Disadvantages:
-      - Insertion and Removal of elements requires O(n) time. I.e., you must shift all existing elements to either create room for the         new element or fill the empty space in the array.
-      - The size of the arrays is fixed. Therefore, you must know the size of the array before hand. Also, in general, the upper limit         of the allocated memory is rarely reached.
+  - Disadvantages:
+    - Insertion and Removal of elements requires O(n) time. I.e., you must shift all existing elements to either create room for the         new element or fill the empty space in the array.
+    - The size of the arrays is fixed. Therefore, you must know the size of the array before hand. Also, in general, the upper limit         of the allocated memory is rarely reached.
     
-    - Time Complexities:
-      - Average Case:
-      - Access: O(1); Insertion: O(n); Removal: O(n); Search: O(n)
+  - Time Complexities:
+    - Average Case:
+    - Access: O(1); Insertion: O(n); Removal: O(n); Search: O(n)
       
-      - Worst Case:
-      - Access: O(1); Insertion: O(n); Removal: O(n); Search: O(n)
+    - Worst Case:
+    - Access: O(1); Insertion: O(n); Removal: O(n); Search: O(n)
     
-    - Space Complexity:
-      - O(n)
+  - Space Complexity:
+    - O(n)
       
 - Linked Lists
 
