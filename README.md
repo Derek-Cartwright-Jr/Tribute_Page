@@ -130,3 +130,8 @@ Trees
 
   - Space Complexity:
     - O(n)
+
+- Hashing
+  
+  - Benefits:
+    - Inserting, Removal, and Searching operations are done in O(1) on average. However, in most cases it is difficult to reach these        optimal performances.
