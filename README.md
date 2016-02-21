@@ -76,7 +76,15 @@ Linear Data Structures
     - Access: O(n); Insert: O(1) (depending on structure used to implement queue); Removal: O(1) (depending on structure used to            implement queue); Search: O(n)
     
 - Stack
- 
+  
+  - Uses: Used to linearly reverse the order of sequential data. 
+  
+  - Time Complexities:
+    - Average/Worst Case:
+    - Access: O(n); Insert: O(1); Removal: O(1); Search: O(n)
+  
+  - Space Complexity:
+    - O(n)
 Trees
 - Binary Search Trees
   
