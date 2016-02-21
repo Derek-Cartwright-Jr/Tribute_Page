@@ -71,6 +71,9 @@ Linear Data Structures
   - Time Complexities:
     - Average/Worst Case:
     - Access: O(n); Enqueue: O(1) (depending on structure used to implement queue); Dequeue: O(1) (depending on structure used to           implement queue); Search: O(n)
+  
+  - Space Complexity:
+    - O(n)
     
 - Stack
   
