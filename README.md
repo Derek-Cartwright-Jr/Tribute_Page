@@ -69,11 +69,8 @@ Linear Data Structures
   - Uses: Used to keep track of order of operations such as a typing input buffer. The structure follows a First In First Out             principle.
   
   - Time Complexities:
-    - Average Case:
-    - Access: O(n); Insert: O(1) (depending on structure used to implement queue); Removal: O(1) (depending on structure used to            implement queue); Search: O(n)
-    
-    - Worst Case:
-    - Access: O(n); Insert: O(1) (depending on structure used to implement queue); Removal: O(1) (depending on structure used to            implement queue); Search: O(n)
+    - Average/Worst Case:
+    - Access: O(n); Enqueue: O(1) (depending on structure used to implement queue); Dequeue: O(1) (depending on structure used to           implement queue); Search: O(n)
     
 - Stack
   
@@ -174,3 +171,20 @@ Trees
   
   - Space Complexity:
     - O(n)
+
+- Graphs
+  
+  - Benefits:
+    - Can be used to represent large networks such as maps and social networks.
+  
+  - Disadvantages:
+    -
+  
+  - Uses:
+    - Social Networks (Each person is a graph node and each connection between that person and another person is a graph edge).
+    - Google Maps (Each place is represented as graph node and the roads or pathways connecting them is a graph edge).
+  
+  - Time Complexities:
+    - Worst Case:
+      - Adjacency List: Storage: O(|V| + |E|); Add Vertex: O(1); Add Edge: O(1); Remove Vertex: O(|V| + |E|); Remove Edge: O(|E|);
+      - Adjacency Matrix: Storage: O(|V|^2); Add Vertex: O(|V|^2); Add Edge: O(1); Remove Vertex: O(|V|^2); Remove Edge: O(1)
