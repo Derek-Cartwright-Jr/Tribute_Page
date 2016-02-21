@@ -15,7 +15,7 @@ Data Structures and Algorithms implemented in Python
     <li>Binary Heap</li>
     <li>Trie</li>
   </ul>
-<li>Graphs</li>
+<li>Hash Table</li>
 </ul>
 
 
@@ -64,7 +64,19 @@ Linear Data Structures
   
   - Space Complexity:
     - O(n)
-
+- Queue
+ 
+  - Uses: Used to keep track of order of operations such as a typing input buffer. The structure follows a First In First Out             principle.
+  
+  - Time Complexities:
+    - Average Case:
+    - Access: O(n); Insert: O(1) (depending on structure used to implement queue); Removal: O(1) (depending on structure used to            implement queue); Search: O(n)
+    
+    - Worst Case:
+    - Access: O(n); Insert: O(1) (depending on structure used to implement queue); Removal: O(1) (depending on structure used to            implement queue); Search: O(n)
+    
+- Stack
+ 
 Trees
 - Binary Search Trees
   
