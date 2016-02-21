@@ -24,7 +24,7 @@ Linear Data Structures
     
   - Benefits:
     - Random access is done in constant time
-      - No implementation necessary.
+    - No implementation necessary in virtually all languages.
     
   - Disadvantages:
     - Insertion and Removal of elements requires O(n) time. I.e., you must shift all existing elements to either create room for the         new element or fill the empty space in the array.
@@ -85,9 +85,9 @@ Trees
       3.  Visit all your right subtree
       
     - PreOrder Traversal
-      1.  
-      2.  
-      3.  
+      1.  Visit yourself
+      2.  Visit all your left subtree
+      3.  Visit all your right subtree
     
     - PostOrder Traversal
       1.  Visit all your left subtree
@@ -109,5 +109,24 @@ Trees
     - Worst Case:
     - Access: O(n); Insertion: O(n); Removal: O(n); Search: O(n)
   
+  - Space Complexity:
+    - O(n)
+
+- Binary Heap
+  
+  - Benefits:
+    - Priority Queues can be efficiently implemented using binary heaps because it supports insert, removal, extractmax/extractmin          operations in O(log n) time.
+    - Can be used in graph algorithms like Dijkstra's Shortest Path.
+    - All levels of the heap will be guaranteed to be filled except for the last level (leaves).
+    - Heap Sort can be done in O(n log n) time which is on average a better performance than a good amount of other sorting algos.
+  
+  - Uses:
+    - Can implement a priority queue which is used in algos like Dijkstra's Shortest Path.
+    - Order Statistics: Heap data structure can be used to efficiently find the kth smallest or largest element in an array.
+
+  - Time Complexities:
+    - Average/Worst Case:
+    - Heapify: O(n); FindMax/FindMin (Depends if heap is min heap or max heap): O(1); ExtractMax/ExtractMin: O(log n); Insert: O(log        n); Removal O(log n); IncreaseKey/DecreaseKey: O(log n)
+
   - Space Complexity:
     - O(n)
