@@ -48,7 +48,7 @@ Linear Data Structures
     - Elements of linked lists sit in memory non-contiguously. Therefore, you don't have to worry about the size of the list growing.
   
   - Disadvantages:
-    - Random access is not allowed. You must sequentially iterate over the elements of the list to until you reach the desired element.
+    - Random access is not allowed. You must sequentially iterate over the elements of the list to until you reach the desired              element.
     - There is extra memory space allocated for the "next node" pointer in each list node.
     - Arrays have better cache locality that can make a pretty big difference in performance.
   
@@ -134,4 +134,23 @@ Trees
 - Hashing
   
   - Benefits:
-    - Inserting, Removal, and Searching operations are done in O(1) on average. However, in most cases it is difficult to reach these        optimal performances.
+    - Inserting, Removal, and Searching operations are done in O(1) on average. This advantage becomes more apparent when the number        of entries is large. However, in most cases it is difficult to reach these optimal performances.
+  
+  - Disadvantages:
+    - Hash Tables are ineffective whe nthe number of entries is very small.
+    - Hash Tables tend to have many collisions given a poor hash function.
+  
+  - Uses:
+    - Caches: auxiliary data tables that are used to speed up the access to data that is primarily stored in the slower media. Hash 
+      collisions can be handled by discarding older items and hanging on to the most recent item.
+    - Sets: Hash table can be used to tell wheter or not such an entry exists or not. The set simply records whether or not a given         key belongs to a specified set of keys.
+  
+  - Time Complexities:
+    - Average Case:
+    - Access: O(1); Insert: O(1); Removal: O(1); Search: O(1)
+    
+    - Worst Case:
+    - Access: O(n); Insert: O(n); Removal: O(n): Search: O(n)
+  
+  - Space Complexity:
+    - O(n)
