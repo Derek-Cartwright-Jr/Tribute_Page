@@ -16,6 +16,7 @@ Data Structures and Algorithms implemented in Python
     <li>Trie</li>
   </ul>
 <li>Hash Table</li>
+<li>Graphs</li>
 </ul>
 
 
