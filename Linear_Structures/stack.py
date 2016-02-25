@@ -1,49 +1,53 @@
 class Stack:
-	# Stack data structure
-	def __init__(self):
+	def __init__(self, iteration=[]):
 		self.items = []
+		self.size = 0
+		for item in iteration: self.push(item)
 
-	# Method to check the size of the stack
-	def size(self):
-		return len(self.items)
+	def __contains__(self, data):
+		return data in self.items
 
-	# Method to check if the stack is empty
-	def isEmpty(self):
-		return len(self.items) == 0
+	def __len__(self):
+		return self.size
 
-	# Method to push item to the top of the stack
-	def push(self, item):
-		self.items.append(item)
+	def __repr__(self):
+		return str(self.items)
 
-	# Method to pop the top most item of the stack
+	""" Pushes an item on the top of the stack """
+	def push(self, data):
+		self.items.append(data)
+
 	def pop(self):
 		return self.items.pop()
 
-	# Method to seek the top of the stack
+	""" Returns the top element on the stack """
 	def seek(self):
-		if self.isEmpty(): return None
 		return self.items[-1]
 
-	# Method to reverse a string using a stack
-	def stringReverse(self, s):
-		stack = Stack()
-		reversed = []
-		for char in s:
-			stack.push(char)
-		while not stack.isEmpty():
-			reversed.append(stack.pop())
-		return "".join(reversed)
+	""" Returns the bottom element of the stack """
+	def bottom(self):
+		return self.items[0]
 
-# Running tests
+	""" Returns whether or not there are any items on the stack """
+	def isEmpty(self):
+		return self.items == []
+
+def test():
+	s = Stack(range(0,100,10))
+	print(s)				# testing __repr__ method
+	print(s.isEmpty())		# testing isEmpty
+	for _ in range(len(s)): # testing pop function
+		print(s.pop())
+	print(s.isEmpty())		# testing isEmpty
+	for num in range(0, 200, 10): # testing push method
+		s.push(num)
+	print(len(s))			# testing __len__ method
+	print(s.seek())			# testing seek method
+	print(s.bottom())		# testing bottom method
+	print(20 in s)			# testing __contains__ method
+
+def main():
+	test()
+
 if __name__ == "__main__":
-	myStack = Stack()
-	print(myStack.isEmpty())
-	for num in range(0, 100, 10):
-		myStack.push(num)
-	print(myStack.size())
-	print(myStack.seek())
-	print(myStack.pop())
-	print(myStack.size())
-	print(myStack.seek())
-	print(myStack.isEmpty())
-	print(myStack.stringReverse("Derek"))
+	main()

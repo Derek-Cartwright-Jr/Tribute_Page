@@ -1,34 +1,63 @@
+""" Implementation of a queue data structure where the front item is
+located at the far right and the back item is located at the far left."""
+
 class Queue:
-	# Queue data structure
-	def __init__(self):
+	def __init__(self, iteration=[]):
 		self.items = []
+		self.size = 0
+		for item in iteration: self.enqueue(item)
 
-	# Method to enqueue items to the end of the queue
-	def enqueue(self, item):
-		self.items.insert(0, item)
+	def __repr__(self):
+		return str(self.items)
 
-	# Method to dequeue front item of the queue
+	def __len__(self):
+		return self.size
+
+	def __contains__(self, data):
+		return self.search(data)
+
+	""" Adds an item at the back of the queue """
+	def enqueue(self, data):
+		self.items.insert(0, data)
+		self.size += 1
+
+	""" Removes and returns the front item of the queue """
 	def dequeue(self):
-		self.items.pop()
+		return self.items.pop()
+		self.size -= 1
 
-	# Method returns if the queue is empty
+	""" Returns if an element is in the queue """
+	def search(self, data):
+		return data in self.items
+
+	""" Returns if queue is empty or not """
 	def isEmpty(self):
-		return len(self.items) == 0
+		return self.items == []
 
-	def peek(self):
+	""" Returns the front of the queue """
+	def seek(self):
 		return self.items[-1]
 
-	# Method returns the size of the queue
-	def size(self):
-		return len(self.items)
+	""" Returns the back of the queue """
+	def end(self):
+		return self.items[0]
 
-# Running tests
+""" Running some tests """
+def test():
+	q = Queue(range(0,100,10))
+	print(q.seek())				# testing seek method
+	print(q.end())				# testing end method
+	print(q)					# testing __repr__ method
+	print(q.isEmpty())			# testing isEmpty method
+	print(len(q))				# testing __len__ method
+	print(10 in q)				# testing __contains__ method
+	for _ in range(len(q)):		# testing dequeue method
+		print(q.dequeue())
+	print(q)
+	print(q.isEmpty())
+
+def main():
+	test()
+
 if __name__ == "__main__":
-
-	myQueue = Queue()
-	for num in range(0, 100, 10):
-		myQueue.enqueue(num)
-	print(myQueue.peek())
-	print(myQueue.size())
-	print(myQueue.dequeue())
-	print(myQueue.size())
+	main()

@@ -57,17 +57,13 @@ class LinkedList:
 		self.head = new_node
 		self.length += 1
 
-	""" Search for an element in the linked list """
-	def search(self, data):
+	""" Add a data element at the end of the linked list """
+	def append(self, data):
+		new_node = Node(data)
 		current = self.head
-		found = False
-		while current and not found:
-			if current.get_data() == data:
-				found = True
-			else:
-				current = current.get_next()
-
-		return found, current.get_data()
+		while current.get_next():
+			current = current.get_next()
+		current.set_next(new_node)
 
 	""" Remove the last data element from the linked list """
 	def pop(self):
@@ -100,6 +96,18 @@ class LinkedList:
 			else:
 				prev.next = current.get_next()
 
+	""" Search for an element in the linked list """
+	def search(self, data):
+		current = self.head
+		found = False
+		while current and not found:
+			if current.get_data() == data:
+				found = True
+			else:
+				current = current.get_next()
+
+		return found, current.get_data()
+
 	""" Reverses the linked list iteratively """
 	def reverse(self):
 		prev = None
@@ -109,23 +117,33 @@ class LinkedList:
 		self.head = prev
 		return self.head
 
+""" Running some tests """
+def test():
+		L = LinkedList(range(0, 100, 10))
+		print(L)		
+		print(len(L))	# testing __len__ function
+		L.pop()			# testing pop method
+		print(L)
+		L.add_head(23)	# testing add_head method
+		print(23 in L)	# testing __contains__
+		print(L.search(23)) # testing search method
+		print(L)		
+		L.remove(23)	# testing remove method
+		print(L)
+		L.reverse()		# testing reverse method
+		print(L)
+		print(L.get_head()) # testing get_head method
+		print(L.get_tail()) # testing get_tail method
+		L.append(25)	# testing append method
+		print(L)
+
+def main():
+	test()
+
+if __name__ == "__main__": main()
 
 
 
-# Some tests for our linked list
-if __name__ == "__main__":
-	L = LinkedList(range(0, 100, 10))
-	print(L)
-	print(len(L))
-	L.pop()
-	print(L)
-	L.add_head(23)
-	print(23 in L)
-	print(L.search(23))
-	print(L)
-	L.remove(23)
-	print(L)
-	L.reverse()
-	print(L)
+
 
 	
