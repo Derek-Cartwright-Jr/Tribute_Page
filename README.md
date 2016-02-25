@@ -5,7 +5,7 @@ Data Structures and Algorithms implemented in Python
 <li>Linear Data Structures</li>
   <ul>
     <li>ArrayList</li>
-    <li>Linked Lists</li>
+    <li>Linked List</li>
     <li>Queue</li>
     <li>Stack</li>
   </ul>
